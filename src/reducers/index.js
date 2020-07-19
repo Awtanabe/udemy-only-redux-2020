@@ -1,4 +1,7 @@
-// 初期データ
+import {combineReducers} from 'redux'
+// 複数のreducerを結合する
+
+// 初期データ? reducerらしい combineしてるから
 const songsReducer = () => {
   return [
     {title: 'No Scrubs', duration: '4:05'},
@@ -8,9 +11,14 @@ const songsReducer = () => {
 }
 
 // Reducer
-const selectedSOngReducer = (selectedSong=null, action) => {
+const selectedSongReducer = (selectedSong=null, action) => {
   if (action.type === 'SONG_SELECTED') {
     return action.payload;
   }
   return selectedSong
 }
+
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+})
