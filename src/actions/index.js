@@ -1,7 +1,7 @@
 // Action Creater
-const selectSong = (song) => {
+export const selectSong = (song) => {
   return {
-    type: 'SOND_SELECTED', // type
+    type: 'SONG_SELECTED', // type
     payload: song // value
   }
 }
