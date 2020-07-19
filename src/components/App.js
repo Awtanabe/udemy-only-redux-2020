@@ -6,8 +6,12 @@ import SongList from './SongList'
 // データはstoreに格納するから関数コンポーネントでいいよね
 function App() {
   return (
-    <div className="App">
-      <SongList/>
+    <div className="ui container grid">
+      <div className="ui row">
+        <div className="column eight wide">
+          <SongList/>
+        </div>
+      </div>
     </div>
   );
 }
