@@ -1,4 +1,6 @@
 import React from 'react';
+// ネームドexport
+import { selectSong } from '../actions'
 
 // データはstoreに格納するから関数コンポーネントでいいよね
 function App() {
